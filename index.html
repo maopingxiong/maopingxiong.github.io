@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta http-equiv="expires" content="-1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>常见问题</title>
+  <script>
+    ;(function(win,doc){
+      doc.addEventListener("DOMContentLoaded",function(){
+        function change(){
+          doc.documentElement.style.fontSize = 100 + "px";
+        }
+        change();
+        win.addEventListener("resize",change,false)
+      },false);
+    })(window,document)
+  </script>
+  <style>
+    body {
+      letter-spacing: 0;
+      margin: 1px 24px;
+      word-break: break-all;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: Roboto-Regular;
+    }
+    .header {
+      color: #252525;
+      font-family: SamsungOneSCN-450;
+    }
+    h4 {
+      margin: 15px 0 6px;
+      font-size: 15px;
+      font-family: Roboto-Medium;
+      color: #010101;
+    }
+    .tip {
+      margin-left: 12px;
+      color: #8C8C8C;
+    }
+    a {
+      color: #8C8C8C;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">常见问题</div>
+  <h4>① 什么是视频通话流转？</h4>
+  <div>三星虚拟设备中心应用为用户提供的视频通话流转功能服务。当您接听或者拨打手机上的视频通话时，可以将其一键流转到您的平板电脑上，满足您多任务处理的需求，或者在场景变化时，解放您的双手，用大屏设备畅快通话。</div>
+  <h4>② 没有看到视频通话流转的入口？</h4>
+  <div>视频通话流转功能通过检测手机通知栏判断到视频通话状态时，在手机当前界面提供流转入口的浮动图标。点击该图标即可发起设备搜索。视频通话状态结束时，浮动图标消失。</div>
+  <br/>
+  <div>如果没有正常显示流转入口浮动图标，请检查手机是否已开启以下设置：</div>
+  <div id="phoneTip" class="tip">
+    1. 允许<a href="intent:com.samsung.android.vdc#Intent;scheme=package;action=android.settings.action.MANAGE_OVERLAY_PERMISSION;end">虚拟设备中心应用程序的悬浮窗权限</a>。
+    <br/>
+    2. 开启<a href="intent:#Intent;action=android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS;end">虚拟设备中心应用程序的通知访问开关</a>。
+    <br/>
+    3. 允许<a href="intent:#Intent;action=android.settings.APP_NOTIFICATION_SETTINGS;S.android.provider.extra.APP_PACKAGE=com.tencent.mm;end">微信应用程序的通知权限</a>。
+  </div>
+  <br/>
+  <div>请检查当前手机系统通知栏是否有微信视频通话的通知。因微信消息通知的延迟，可能导致应用监测不到视频通话状态，从而无法显示流转入口的浮动图标。</div>
+  <h4>③ 搜索不到目标设备？</h4>
+  <div>视频通话流转功能要求您的手机和平板电脑均开启WLAN和蓝牙开关。</div>
+  <br/>
+  <div>在使用流转功能前，请确保您的手机和平板电脑已登录同一三星账号，并且都已开启功能开关（设置 - 已连接的设备 - 视频通话流转）。</div>
+  <br/>
+  <div>如仍搜索不到目标设备，请关闭后打开功能开关，重新尝试。</div>
+  <h4>④ 点击目标设备但流转失败？</h4>
+  <div>
+    为了保证视频通话流转能够正常调用平板电脑的摄像头、麦克风和扬声器，请在平板电脑上确认虚拟设备中心应用程序的必要权限均已开启：
+  </div>
+  <div id="tabletTip" class="tip">
+    1. 附近的设备
+    <br/>
+    2. 相机
+    <br/>
+    3. 麦克风
+    <br/>
+    （设置 - 应用程序 - 虚拟设备中心 - 权限）
+  </div>
+  <br/>
+  <div>请确保您的平板电脑当前没有其它应用正在使用WLAN直连，可关闭后再次打开WLAN开关，重新尝试。</div>
+  <h4>⑤ 如何选择我的其它平板电脑进行流转？</h4>
+  <div>当前视频通话流转只支持流转到一台平板电脑，在与平板电脑连接的过程中，只能调用手机或者已连接的平板电脑的摄像头、麦克风和扬声器。</div>
+  <div>如若需要流转到其它平板电脑，调用其它平板电脑的摄像头或者麦克风和扬声器，请先结束当前的流转，再选择其它平板电脑。</div>
+</body>
+</html>
