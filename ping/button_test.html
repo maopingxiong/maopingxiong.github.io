@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>React App</title>
+  </head>
+  <script>
+    function aaa() {
+      console.log("CLOG~~ aaa");
+      let json = {
+        taskId: "茂平小可耐",
+        packageName: "com.samsung.android.app.sreminder",
+        deeplink: "",
+        activityList: ["com.samsung.android.app.sreminder.MainActivity"],
+        duration: 15000,
+        type: 0,
+        urlList: ["https://samsungyx.com/"],
+      };
+      window.DownloadInterface.catchLifecycleEvent(JSON.stringify(json));
+    }
+
+    function bbb() {
+      console.log("CLOG~~ bbb");
+      let json = {
+        packageName: "com.samsung.android.app.sreminder",
+        activityList: [],
+        duration: 15000,
+        operationTime: 0,
+        type: 0,
+        urlList: [],
+      };
+
+      window.DownloadInterface.catchLifecycleEvent(JSON.stringify(json));
+    }
+  </script>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <button onclick="aaa()">111</button>
+      <button onclick="bbb()">222</button>
+    </div>
+  </body>
+</html>
